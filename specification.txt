@@ -43,6 +43,9 @@ EXAMPLE: [1 2 3] => (list 1 2 3)
 "X" -> String.
 EXAMPLE: "This is a string!" => "This is a string!"
 
+|X| -> Code comment.
+EXAMPLE: | This is a code comment! | => Ignored by OCanada.
+
 EH? -> End code block.
 EXAMPLE: play_lacrosse 100 eh? => 100
 
