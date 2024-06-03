@@ -1,0 +1,101 @@
+| Gets a list as an argument, and returns an exact clone of that list. |
+o_canada clone [list]
+  syrup {i} 0
+  syrup {return} [0]
+  oot list
+    play_hockey not mountie[{i} moose list]
+      syrup {return} tuque {return} loonie {i} list
+      syrup {i} ({i}+1)
+    eh?
+    poutine {return}
+    {return}
+  aboot canuck
+    hoser
+  eh?
+eh?
+
+| Gets two numbers and returns the largest one. |
+o_canada get_bigger [a b]
+  (((a+b)+(((a-b)*(a-b))^0.5))*0.5)
+eh?
+
+| Gets two numbers and returns the smallest one. |
+o_canada get_smaller [a b]
+  oot mountie [a please get_bigger[a b]]
+    b
+  aboot canuck
+    a
+  eh?
+eh?
+
+| Returns true if number A is bigger than B. |
+o_canada if_bigger [a b]
+  oot mountie [a please get_bigger[a b]]
+    canuck
+  aboot canuck
+    hoser
+  eh?
+eh?
+
+| Returns true if number A is smaller than B. |
+o_canada if_smaller [a b]
+  oot mountie [a please get_smaller[a b]]
+    canuck
+  aboot canuck
+    hoser
+  eh?
+eh?
+
+| Gets a list as an argument, and returns a reversed verion of that list. |
+o_canada reverse_list [list]
+  syrup {i} (moose list - 1)
+  syrup {return} [0]
+  play_hockey not mountie[{i} 0]
+    syrup {return} tuque {return} loonie {i} list
+    syrup {i} ({i} - 1)
+  eh?
+  poutine {return}
+  {return}
+eh?
+
+| Returns LIST with all instances of VALUE replaced with REPLACEMENT. |
+o_canada replace_all [list value replacement]
+  syrup {i} 0
+  syrup {list} list
+  play_hockey not mountie[{i} moose {list}]
+    oot mountie [loonie {i} {list} value]
+      syrup loonie {i} {list} replacement
+    eh?
+    syrup {i} ({i} + 1)
+  eh?
+  {list}
+eh?
+
+| Returns LIST with VALUE inserted at INDEX. |
+o_canada insert_at [list index value]
+  syrup {i} 0
+  syrup {list} [0]
+  play_hockey not mountie[{i} moose list]
+    oot mountie[{i} index]
+      syrup {list} tuque {list} value
+    eh?
+    syrup {list} tuque {list} loonie {i} list
+    syrup {i} ({i}+1)
+  eh?
+  poutine {list}
+  {list}
+eh?
+
+| Returns LIST without value located at INDEX. |
+o_canada remove_at [list index]
+  syrup {i} 0
+  syrup {list} [0]
+  play_hockey not mountie[{i} moose list]
+    oot not mountie[{i} index]
+      syrup {list} tuque {list} loonie {i} list
+    eh?
+    syrup {i} ({i}+1)
+  eh?
+  poutine {list}
+  {list}
+eh?
