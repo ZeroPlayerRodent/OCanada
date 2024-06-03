@@ -1,0 +1,147 @@
+== Data ==
+
+Number -> Any real number between negative infinity and positive infinity.
+EXAMPLE: 123.456 => 123.456
+PROTIP: Use math expressions to represent negative numbers. For example you would represent negative eight as (0-8).
+
+String -> String of characters.
+EXAMPLE: "Hello, World!" => "Hello, World!"
+
+Character -> ASCII character.
+EXAMPLE: puck "a" => #\a
+
+List -> Collection of any non-function data type indexed starting from 0.
+EXAMPLE: [1 "Two" 3.3 [4]] => (list 1 "Two" 3.3 (list 4))
+PROTIP: An empty list is equal to NIL.
+
+Structure -> Collection of any non-function data type with each piece of data stored in a named slot.
+EXAMPLE: ice book author pages blurb eh? => (structure "book")
+
+Global Variable -> Name with any non-function data type bound to it. Global variables are accessible anywhere in your program.
+EXAMPLE: syrup global_var 10 => 10
+PROTIP: If you don't want your variable name to conflict with the names of built in functions, prefix it with an underline.
+
+Local Variable -> Name with any non-function data type bound to it. Local variables are accessible only in the function in which they were defined.
+EXAMPLE: syrup {local_var} 10 => 10
+PROTIP: Use local variables when you don't want variables to conflict with each other across different functions.
+
+Function -> Named block of code that can be invoked on command. Returns last value executed in the block of code.
+EXAMPLE: poutine [1 2 3] => 1
+
+== Syntax ==
+
+{X} -> Local variable X.
+EXAMPLE: syrup {local_var} 10 => 10
+
+(X) -> Math expression. Returns the resulting number from a formula.
+EXAMPLE: (20+(3*100)+100) => 420
+PROTIP: There is default order of operations in math expressions, so you have to specify it with additional parenthesis.
+
+[X] -> List.
+EXAMPLE: [1 2 3] => (list 1 2 3)
+
+"X" -> String.
+EXAMPLE: "This is a string!" => "This is a string!"
+
+EH? -> End code block.
+EXAMPLE: play_lacrosse 100 eh? => 100
+
+== Keywords ==
+
+HOSER -> NIL
+EXAMPLE: hoser => nil
+
+CANUCK -> TRUE
+EXAMPLE: canuck => true
+
+== Functions ==
+
+NOT X -> If X doesn't return nil, return nil. Otherwise return true.
+EXAMPLE: not hoser => canuck
+
+SYRUP X Y -> Set variable X to Y. If variable does not exist, create it.
+EXAMPLE: syrup my_var "Hello!" => "Hello!"
+
+ASK_POLITELY -> Return one line of user input as a string.
+EXAMPLE: syrup input ask_politely => "This is my input"
+
+TOONIE X -> Return string X as a number.
+EXAMPLE: toonie "100" => 100
+
+APOLOGIZE X -> Output X.
+EXAMPLE: apologize "Hello, World!" => "Hello, World!"
+
+NANAIMO X -> Return string X as a list of single character strings.
+EXAMPLE: nanaimo "TEST" => (list "T" "E" "S" "T")
+
+PUCK X -> If X is a string or integer, return X as an equivalent character.
+EXAMPLE: puck 97 => #\a
+
+CAD X -> Return char X as ASCII number.
+EXAMPLE: cad puck "a" => 97
+
+PLAY_HOCKEY X EH? -> Execute code between "EH?" while X doesn't return nil.
+EXAMPLE: play_hockey canuck apologize "INFINITY" eh? => (infinite output)
+
+O_CANADA X Y EH? -> Define custom function named X with Y as a list of named parameters. Body of function is code between "EH?" after X and Y.
+EXAMPLE: o_canada square_root [value] (value^0.5) eh? => (value^0.5)
+
+PLEASE X Y -> Call custom function X with list Y of arguments.
+EXAMPLE: please square_root [4] => 2
+
+OOT X EH? -> If X doesn't return nil, execute code between "EH?"
+EXAMPLE: oot canuck apologize "Canuck is true!" eh? => "Canuck is true!"
+
+ABOOT X -> Functions as "else" statement inside OOT statement.
+EXAMPLE: oot hoser apologize "Nope." aboot canuck apologize "Yep!" eh? => "Yep!"
+
+THANKS -> Break from "PLAY_HOCKEY" statement.
+EXAMPLE: play_hockey canuck apologize "BREAK!" thanks eh? => "BREAK!"
+
+SORRY X -> If X returns an error, return nil. Otherwise return whatever X returns.
+EXAMPLE: sorry ("NaN"/0) => nil
+PROTIP: Use SORRY when processing user input.
+
+STAND_ON_GUARD_FOR_THEE X -> Save current program as executable file named string X.
+EXAMPLE: stand_on_guard_for_thee "my_program.exe" => (saves executable file named "my_program.exe")
+PROTIP: When the saved executable file is opened, it will immediately execute the custom function named "main".
+
+MOOSE X -> Returns the length of list X.
+EXAMPLE: moose [1 2 3] => 3
+
+BEAVER X -> Returns number X without decimal places.
+EXAMPLE: beaver 1.2345 => 1
+
+ICE X EH? -> Define structure named X, with slots defined by names between "EH?".
+EXAMPLE: ice book author pages blurb eh? => (structure "book")
+
+PLAY_LACROSSE EH? -> Execute all code between "EH?" and return last value executed.
+EXAMPLE: play_lacrosse 1 2 3 eh? => 3
+
+BUDDY X -> Return instance of struct X.
+EXAMPLE: syrup book_one buddy book => (instance of structure "book")
+
+DONAIR X Y -> Return slot X of structure Y.
+EXAMPLE: syrup donair author book_one "George Orwell" => "George Orwell"
+
+LOONIE X Y -> Return index X of list Y.
+EXAMPLE: loonie 1 [1 2 3] => 2
+
+TUQUE X Y -> Return X with Y appended to it. Works with lists and strings.
+EXAMPLE: tuque "Hello, " "World!" => "Hello, World!"
+
+FREEZE X -> Pause code execution for X seconds.
+EXAMPLE: freeze 0.5 => (pauses for 0.5 seconds)
+
+MOUNTIE X -> Return true if all elements of list X are equal to each other. Otherwise return nil.
+EXAMPLE: mountie ["DUCK" "DUCK" "GOOSE"] => nil
+
+POUTINE X -> Return first element of list X and pops list X.
+EXAMPLE: poutine [1 2 3] => 1
+
+GOOSE X -> Evaluate string X as OCanada code. Return final value executed.
+EXAMPLE: goose "[1 2 3]" => (list 1 2 3)
+
+SNOW X -> Return contents of file named string X as string.
+EXAMPLE: snow "filename.txt" => (contents of filename.txt as string)
+PROTIP" Use SNOW alongside GOOSE to load an external OCanada library. For example do this to load the standard library: goose snow "lib/stdlib.canada"

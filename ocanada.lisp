@@ -1,0 +1,17 @@
+; Main script.
+(declaim (sb-ext:muffle-conditions cl:warning))
+(require :uiop)
+(load "split-string.lisp")
+(load "parse.lisp")
+(load "blocks.lisp")
+(load "eval.lisp")
+(load "interpret.lisp")
+(load "utils.lisp")
+(load "math.lisp")
+
+(defun main ()
+  (if (uiop:command-line-arguments)
+    (interpret (elt (uiop:command-line-arguments) 0))
+    (format t "Sorry buddy, you didn't enter a filename!")
+  )
+)
