@@ -1,11 +1,13 @@
 # OCanada
-![screenshot-1](https://github.com/ZeroPlayerRodent/OCanada/blob/main/OCanada_Logo.png)
+![OCanada Logo](https://github.com/ZeroPlayerRodent/OCanada/blob/main/OCanada_Logo.png)
 
-OCanada is a programming language with syntax inspired by Canadian slang, eh?
+OCanada is a general-purpose programming language with syntax inspired by Canadian slang, eh?
 
-It functions similarly to Lisp or Ruby, so if you know those languages you should be able to learn OCanada pretty easily, eh?
+With functions and keywords named after `hosers`, `canucks` and `mounties`, OCanada provides the most authentic Canadian programming experience, eh?
 
-# Examples
+It functions similarly to [Lisp](https://lisp-lang.org/) or [Ruby](https://www.ruby-lang.org/en/), so if you know those languages you should be able to learn OCanada pretty easily, eh?
+
+## Examples
 
 Here's some examples of OCanada code, eh?
 
@@ -58,3 +60,23 @@ eh?
 
 please main []
 ```
+## Features
+
+- Arbitrary precision integers and floats
+- A built-in function for saving your programs as executables
+- A standard library filled with useful utility functions
+- Dynamic typing
+- Eval function for metaprogramming shenanigans
+- Local and global variables
+- The ability to define custom structures
+
+## Get Started!
+
+How to set up OCanada:
+
+1. Clone the OCanada repo to your local machine.
+2. Compile OCanada by running `build.lisp` in [SBCL](https://www.sbcl.org/).
+3. Keep the executable in the same directory as the `lib` and `programs` directories.
+6. Type `./ocanada.exe programs/filename.canada` in your terminal to run a program.
+
+Now that you have OCanada set up, refer to the [Language Specification](https://github.com/ZeroPlayerRodent/OCanada/blob/main/specification.txt) to learn how to write programs!
