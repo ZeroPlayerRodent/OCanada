@@ -35,7 +35,7 @@ EXAMPLE: syrup {local_var} 10 => 10
 
 (X) -> Math expression. Returns the resulting number from a formula.
 EXAMPLE: (20+(3*100)+100) => 420
-PROTIP: There is default order of operations in math expressions, so you have to specify it with additional parenthesis.
+PROTIP: There is no order of operations in math expressions, so you have to specify it with additional parenthesis.
 
 [X] -> List.
 EXAMPLE: [1 2 3] => (list 1 2 3)
