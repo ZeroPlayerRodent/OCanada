@@ -1,0 +1,40 @@
+goose snow "lib/stdlib.canada"
+
+o_canada main []
+  syrup input hoser
+  play_hockey canuck
+    syrup secret_number (maple_leaf 99 + 1)
+    apologize "I'm thinking of a number between 1-100."
+    apologize puck 10
+    apologize "Can you guess what it is?"
+    apologize puck 10
+    play_hockey canuck
+      apologize "Enter your guess: "
+      syrup input sorry beaver toonie ask_politely
+      oot input
+        oot mountie[input secret_number]
+          apologize "You guessed correctly!"
+          thanks
+        aboot please if_bigger[input secret_number]
+          apologize "Your number is too high!"
+        aboot please if_smaller[input secret_number]
+          apologize "Your number is too low!"
+        eh?
+      aboot canuck
+        apologize "That's not a number..."
+      eh?
+      apologize puck 10
+    eh?
+    apologize puck 10
+    apologize "Would you like to play again? (y/n): "
+    syrup input ask_politely
+    oot mountie[input "y"]
+      apologize puck 10
+    aboot canuck
+      apologize "Goodbye!"
+      thanks
+    eh?
+  eh?
+eh?
+
+please main []
