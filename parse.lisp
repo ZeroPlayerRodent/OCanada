@@ -79,19 +79,9 @@
 )
 
 ; Function that gets a variable.
-(defun get-var (start)
+(defun get-variable (start)
   (setf i start)
-  (let ((x (read-from-string (concatenate 'string (elt code-string (+ i 1)) "-val"))))
-    (setf i (+ i 2))
-    x
-  )
-)
-
-; Function that gets a local variable.
-(defvar scope-name "toplevel")
-(defun get-local-var (start)
-  (setf i start)
-  (let ((x (read-from-string (concatenate 'string (elt code-string (+ i 1)) "-in-" scope-name))))
+  (let ((x (read-from-string (concatenate 'string (elt code-string (+ i 1)) "-var"))))
     (setf i (+ i 2))
     x
   )
