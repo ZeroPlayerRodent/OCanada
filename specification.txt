@@ -148,3 +148,6 @@ EXAMPLE: goose "[1 2 3]" => (list 1 2 3)
 SNOW X -> Return contents of file named string X as string.
 EXAMPLE: snow "filename.txt" => (contents of filename.txt as string)
 PROTIP" Use SNOW alongside GOOSE to load an external OCanada library. For example do this to load the standard library: goose snow "lib/stdlib.canada"
+
+MAPLE_LEAF X -> Return a psuedo-random number between 0 and X.
+EXAMPLE: maple_leaf 99 => 51
