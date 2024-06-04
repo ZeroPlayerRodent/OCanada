@@ -1,0 +1,73 @@
+| Note: This brainfuck interpreter is very slow, you should probably use a faster one for serious programming. |
+
+o_canada brainfuck [input]
+  syrup {code} nanaimo input
+  syrup {ip} 0
+  syrup {i} 0
+  syrup {tape} [0]
+  syrup {char_buffer} hoser
+  syrup {match} 0
+  play_hockey not mountie[{ip} moose {code}]
+    oot mountie["+" loonie {ip} {code}]
+      syrup loonie {i} {tape} ((loonie {i} {tape}+1)%256)
+    aboot mountie["-" loonie {ip} {code}]
+      syrup loonie {i} {tape} ((loonie {i} {tape}-1)%256)
+    aboot mountie[">" loonie {ip} {code}]
+      syrup {i} ({i}+1)
+      oot mountie[{i} moose {tape}]
+        syrup {tape} tuque {tape} 0
+      eh?
+    aboot mountie["<" loonie {ip} {code}]
+      syrup {i} ({i}-1)
+    aboot mountie["." loonie {ip} {code}]
+      apologize puck loonie {i} {tape}
+    aboot mountie["," loonie {ip} {code}]
+      oot not {char_buffer}
+        syrup {char_buffer} nanaimo ask_politely
+        syrup loonie {i} {tape} cad puck loonie 0 {char_buffer}
+        poutine {char_buffer}
+      aboot canuck
+        syrup loonie {i} {tape} cad puck loonie 0 {char_buffer}
+        poutine {char_buffer}
+      eh?
+    aboot mountie["[" loonie {ip} {code}]
+      oot mountie[loonie {i} {tape} 0]
+        syrup {match} ({match}+1)
+        play_hockey not mountie[{match} 0]
+          syrup {ip} ({ip}+1)
+          oot mountie["[" loonie {ip} {code}]
+            syrup {match} ({match}+1)
+          aboot mountie["]" loonie {ip} {code}]
+            syrup {match} ({match}-1)
+          eh?
+        eh?
+      eh?
+    aboot mountie["]" loonie {ip} {code}]
+      oot not mountie[loonie {i} {tape} 0]
+        syrup {match} ({match}+1)
+        play_hockey not mountie[{match} 0]
+          syrup {ip} ({ip}-1)
+          oot mountie["[" loonie {ip} {code}]
+            syrup {match} ({match}-1)
+          aboot mountie["]" loonie {ip} {code}]
+            syrup {match} ({match}+1)
+          eh?
+        eh?
+      eh?
+    eh?
+    syrup {ip} ({ip}+1)
+  eh?
+  {tape}
+eh?
+
+o_canada main []
+  apologize "Enter brainfuck program filename: "
+  syrup file sorry snow ask_politely
+  oot file
+    please brainfuck [file]
+  aboot canuck
+    apologize "Could not open that file."
+  eh?
+eh?
+
+please main[]
