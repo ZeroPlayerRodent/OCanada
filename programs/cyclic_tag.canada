@@ -1,0 +1,28 @@
+| Simple cyclic tag system simulator |
+
+o_canada combine [a b]
+  syrup {a} a
+  syrup {i} 0
+  play_hockey not mountie[{i} moose b]
+    syrup {a} tuque {a} loonie {i} b
+    syrup {i} ({i} + 1)
+  eh?
+  {a}
+eh?
+
+| Initial word |
+syrup word [1 1 0 0 1]
+
+| List of productions |
+syrup productions [[0 1 0] [0 0 0] [1 1 1 1]]
+
+play_hockey word
+  apologize word
+  oot mountie[loonie 0 word 1]
+    syrup word please combine [word loonie 0 productions]
+  eh?
+  poutine word
+  syrup productions tuque productions loonie 0 productions
+  poutine productions
+  freeze 0.5
+eh?
