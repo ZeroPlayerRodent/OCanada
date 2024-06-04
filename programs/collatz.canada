@@ -1,0 +1,30 @@
+goose snow "lib/stdlib.canada"
+
+o_canada collatz [value]
+  oot mountie[(value%2) 0]
+    (value/2)
+  aboot canuck
+    ((value*3)+1)
+  eh?
+eh?
+
+o_canada main []
+  apologize "Enter a positive number: "
+  syrup {num} sorry beaver toonie ask_politely
+  oot {num}
+    oot please if_bigger [{num} 0]
+      play_hockey not mountie [{num} 1]
+        syrup {num} please collatz [{num}]
+        apologize {num}
+        apologize puck 10
+      eh?
+      apologize "Your number converged to 1!!!"
+    aboot canuck
+      apologize "That's not a positive number..."
+    eh?
+  aboot canuck
+    apologize "Invalid input..."
+  eh?
+eh?
+
+please main []
