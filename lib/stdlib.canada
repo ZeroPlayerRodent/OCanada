@@ -31,7 +31,11 @@ eh?
 | Returns true if number A is bigger than B. |
 o_canada if_bigger [a b]
   oot mountie [a please get_bigger[a b]]
-    canuck
+    oot not mountie [a b]
+      canuck
+    aboot canuck
+      hoser
+    eh?
   aboot canuck
     hoser
   eh?
@@ -40,7 +44,11 @@ eh?
 | Returns true if number A is smaller than B. |
 o_canada if_smaller [a b]
   oot mountie [a please get_smaller[a b]]
-    canuck
+    oot not mountie [a b]
+      canuck
+    aboot canuck
+      hoser
+    eh?
   aboot canuck
     hoser
   eh?
