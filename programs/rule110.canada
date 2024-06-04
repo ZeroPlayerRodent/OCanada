@@ -1,0 +1,72 @@
+goose snow "lib/stdlib.canada"
+
+syrup first [0]
+syrup next [0]
+
+o_canada next_cell [value]
+  oot mountie[111 value]
+    0
+  aboot mountie[100 value]
+    0
+  aboot mountie[0 value]
+    0
+  aboot canuck
+    1
+  eh?
+eh?
+
+o_canada print_iteration [value]
+  syrup {i} 0
+  play_hockey not mountie[{i} moose value]
+    oot mountie[loonie {i} value 0]
+      apologize " "
+    aboot canuck
+      apologize "X"
+    eh?
+    syrup {i} ({i}+1)
+  eh?
+  apologize puck 10
+eh?
+
+o_canada initialize [_moose]
+  syrup {i} _moose
+  play_hockey not mountie[{i} 0]
+    syrup first tuque first 0
+    syrup next tuque next 0
+    syrup {i} ({i}-1)
+  eh?
+  syrup first tuque first 1
+  syrup next tuque next 0
+eh?
+
+o_canada simulate []
+  play_hockey canuck
+    syrup {x} 0
+    syrup {cell} 0
+    play_hockey not mountie[{x} moose first]
+      syrup {cell} ({cell}+(loonie({x}-1)first*100))
+      syrup {cell} ({cell}+(loonie{x}first*10))
+      syrup {cell} ({cell}+(loonie({x}+1)first*1))
+      syrup loonie {x} next please next_cell [{cell}]
+      syrup {cell} 0
+      syrup {x} ({x}+1)
+    eh?
+    syrup first please clone [next]
+    please print_iteration [first]
+    freeze 0.1
+  eh?
+eh?
+
+o_canada main []
+  apologize "ENTER SIMULATION WIDTH: "
+  syrup {input} sorry toonie ask_politely
+  oot {input}
+    please initialize [{input}]
+    please simulate []
+  aboot canuck
+    apologize puck 10
+    apologize "INVALID SIZE"
+  eh?
+eh?
+
+please main[]
