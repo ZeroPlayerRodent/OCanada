@@ -95,7 +95,7 @@ EXAMPLE: please square_root [4] => 2
 OOT X EH? -> If X doesn't return nil, execute code between "EH?"
 EXAMPLE: oot canuck apologize "Canuck is true!" eh? => "Canuck is true!"
 
-ABOOT X -> Functions as "else" statement inside OOT statement.
+ABOOT X -> Functions as "else if" statement inside OOT statement.
 EXAMPLE: oot hoser apologize "Nope." aboot canuck apologize "Yep!" eh? => "Yep!"
 
 THANKS -> Break from "PLAY_HOCKEY" statement.
