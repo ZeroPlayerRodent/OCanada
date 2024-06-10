@@ -18,7 +18,7 @@
         ((typep foo 'string)(format t foo))
         (t (print foo))
   )
-  (finish-output t)
+  (finish-output)
 )
 
 ; Function that gets the contents of a file as a string.
