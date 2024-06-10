@@ -28,7 +28,7 @@
              `(setf ,(next) ,(next))
           )
         )
-        ((equal "ASK_POLITELY" code)'(progn (finish-output t)(read-line t)))
+        ((equal "ASK_POLITELY" code)'(progn (finish-output)(read-line t)))
         ((equal "TOONIE" code)`(parse-float-error ,(next)))
         ((equal "APOLOGIZE" code)`(output ,(next)))
         ((equal "MAPLE_LEAF" code)`(random ,(next) (make-random-state t)))
